@@ -9,6 +9,7 @@ describe('adding an instance method to a subclass via this', () => {
     class Super {
       constructor (fn) {
         // if fn, add fn as instance method to class Sub
+        if (fn) this.constructor.prototype[fn.name] = fn
       }
     }
 
@@ -38,6 +39,7 @@ describe('adding an instance method to a subclass via this', () => {
     class Super {
       init (fn) {
         // if fn, add fn as instance method of class Sub
+        if (fn) this.constructor.prototype[fn.name] = fn
         return this
       }
     }
