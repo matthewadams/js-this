@@ -32,6 +32,7 @@ describe('adding an instance method to a subclass via this', () => {
     expect(new Super().hi).not.to.be.ok()
     expect(new Super().bye).not.to.be.ok()
     expect(sub.bye()).to.equal(new Sub(function bye () { return 'bye' }).bye())
+    expect(sub.bye()).to.equal(new Sub().bye())
     expect(sub.bye).to.equal(new Sub().bye)
   })
 
