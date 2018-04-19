@@ -8,7 +8,7 @@ describe('adding an instance method to a subclass via this', () => {
   it('should work in the super constructor', () => {
     class Super {
       constructor (fn) {
-        // if fn, add fn as instance method to class Sub
+        // if fn, add fn as instance method named fn.name to class Sub
       }
     }
 
@@ -37,7 +37,7 @@ describe('adding an instance method to a subclass via this', () => {
   it('should work in the super init method', () => {
     class Super {
       init (fn) {
-        // if fn, add fn as instance method of class Sub
+        // if fn, add fn as instance method named fn.name of class Sub
         return this
       }
     }
